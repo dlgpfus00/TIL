@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #em{
+    font-size: 2em;
+
+  }
+
+  #rem{
+    font-size: 2rem;
+  }
+
+  html{
+    font-size:32px;
+  }
+
+  #per{
+    width: 500px;
+    border: 1px solid #999;
+
+  }
+
+  #progress{
+    width: 70%;
+    background-color: blue;
+    color: #fff;
+    text-align: center;
+  }
+
+
+</style>
+
+<body>
+
+  <!-- 부모 기준이라 div로 감ㅅ싸줌 -->
+  <h2>em</h2>
+  <div style="font-size: 8px">
+    <p id="em">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita earum officiis quis eaque repellat error tenetur
+      odit exercitationem distinctio reprehenderit deserunt voluptas, deleniti rerum ipsum dolor et nemo nesciunt
+      impedit.
+    </p>
+    <!-- 정해진 폰트사이즈 없기 때문에 16px fontsize-2em= 16의 두배 -->
+    <!-- 장점: 모바일 화면이나 태블릿에서 만들 때 부모 폰트사이즈만 줄이면 다 줄어들음 -->
+    <!-- style="font-size: 8px"해주면 다시 원상복귀 -->
+  </div>
+
+  <!-- html기준이라 p태그만 -->
+  <h2>rem</h2>
+  <p id="rem">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat esse assumenda aperiam asperiores velit quis,
+    eveniet perspiciatis, officia enim ab, quisquam explicabo repudiandae sed? Quasi a incidunt cumque accusamus error.
+  </p>
+
+  <h2>per</h2>
+  <div id="per">
+    <div id="progress">
+      70%
+    </div>
+  </div>
+
+</body>
+
+</html>

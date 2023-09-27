@@ -1,0 +1,84 @@
+1. for 
+  증감식 -> 인덱스 조정 가능 
+
+2. for each
+  모든 요소 순회, 인덱스 -> 순서 보장   //인덱스가 필요하거나 순서가 보장되는데 모든 요소를 순회해야할떄
+
+3. for in 
+  이터러블하지 않은 객체의 key (일반 객체를 순회하고 싶을때 )
+
+4 for of 
+  모든 요소 순회 -> 순서 보장 안됨   // 순회만 하면 될 때 
+
+**정말 중요 **
+--------------------------------------------------------------------
+
+빌트인 객체 
+console.log()  (콘솔 객체에 log메서드)
+Array().fill()
+
+string
+math
+date 
+number ...
+
+
+1. math
+  math.max(a....z) //a~z중 최댓값 
+    ex) math.max(1,2,3) //3 
+    
+    검색 팁 -- > javascript 배열 내 최댓값
+
+  math.random()  0~1 사에의 무작위 숫자 
+
+  math.floor(소수) //소수점 이하 버림
+        ceil(소수) //소수점 이하 올림
+        round(소수) //소수점 첫번째 자리에서 반올림
+        trunc(소수) //소수점 이하 절삭 
+
+  math.abs(a) //절댓값
+  math.sqrt(a) //제곱근
+  math.cbrt(a) //세제곱근
+  math.log(a)  ///자연로그
+
+  number 
+    number.max_value: 자바스크립트에서 사용 가능한 가장 큰 숫자 (1.7e+308)
+    number.Min_value: 자바스크립트에서 사용 가능한 가장 작은 숫자
+    number.isFinit():  유한수 무한수
+    number.tostring(): 숫자를 문자열ㄹ로 반환 (많이 쓰임)
+
+    Number("5"):문자는 숫자로 반환 ---> parseInt("5")
+    ex) "5" -> 5
+    형변환 -> 자료형을 반환
+    
+  typeof 5 //number 
+  if(type 5 ==='number'){
+    ...
+  }
+    
+
+  string 
+    string.length(): 문자열 길이(몇글자)
+    "안녕하세요".length()//5
+
+    string.sharAt(index):해당 인덱스의 문자 
+    ex) "안녕하세요".charAt(3) //세 
+
+    string.replace('a','b) //a라는 문자를 b로 대체한다
+
+    string.concat()
+    ex) "안녕".concat("하세요") //안녕하세요
+      --> map은 배열에서 사용. string 도 유사 배열 객체이기 때문에 일부 메서드 사용 가능
+
+    string.split() : 특정 기준으로 문자열 문할
+
+    string.repeat(n) n번 문자열 반복 
+    ex) "안녕".repeat(2)// 안녕안녕 
+
+  date 
+    날짜와 시간을 생성하는 빌트인 함수 (잘 사용 ㄴㄴ)
+    // 로컬 환경 시간을 기준하기 떄문에 잘 사용하지 않음 -> dayjs, mommentJS, luxon
+
+    시간 연산 
+
+

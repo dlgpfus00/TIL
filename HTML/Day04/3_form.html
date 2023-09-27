@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    method
+    :백엔드에게 데이터를 전달하는 방식 
+    GET (조회)
+    POST (배송)
+
+    API(Application Programing Interface) 
+      : 서버와 서버끼리 데이터를 주고 받을 수 있는 연결 환경
+        (api를 통해서 데이터를 주고받는다.)
+
+    Rest Api
+      : api에 자원을 구분하기 위해 이름을 주어지는 것 
+      https:// 백엔드.com/user.sign-up =>회원가입   
+      
+      get,  https:// 백엔드.com/user 조회
+      post  https:// 백엔드.com/user 회원가입
+
+      이름을 붙여주기 위해서도 많이 씀, rest api를 위해도 사용 (먼소리지)
+
+
+      Get (주소로만 데이터 전송)
+      -데이터 전송시 utl(주소)에 데이터를 실어서 전달
+      https:// 백엔드.com/product/3826 상품번호 3726번 데이터 요청
+      **중요데이터는 get으로 보내면 안됨**
+
+      Post (주소뿐만 아니라 )
+    
+
+    Post
+      -
+    -->
+
+  <form action="#" method="GET"> 
+    <!-- #: 백엔드의 회원가입 url주소 -->
+    <p>
+      <label for="">이메일</label>
+      <input type="email" placeholder="`메일 입력" name="username">
+      <button type="button"> 중복검사</button>
+    </p>
+
+    <p>
+      <label for="">비밀번호</label>\
+      <input type="password" placeholder="비밀번호 입력" name="username">
+    </p>
+
+      <button>회원가입</button>  
+      <!-- 타입을 설정해주지 않으면 URL로 전송, defalt는 submit 이기 때문에  -->
+  </form>
+</body>
+</html>

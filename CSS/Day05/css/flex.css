@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.flex {
+  width: 800px;
+  height: 300px;
+  background-color: blue;
+  color: #fff;
+  display: flex;
+  /* 정렬하고싶은 자식에게 display 속성을 주는 것 */
+  /* css의 상속
+  => 폰트나 색상 관련된 속성은 자식으로 상속된다. 
+  ul에만 컬러를 주었는데 li에 상속 */
+}
+
+ul > li{
+  height: 200px;
+  background-color: aquamarine;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  /* flex는 블럭 자식 요소의 수평 정렬을 위해서만 사요하는 것이 아니라
+  안에든 컨텐츠(내용물)의 가로 세러 가운데 정렬에도 유용 */
+  flex-basis: 200px;
+  /*display flex의 자식 요소 크기 */
+  /* 자식 요소의 크기의 총합은 부모 요소의 크기를 넘을 수 없음 */
+  /* 부모여소 800에 맞추기 위해서 하나에 160으로 맞춤 */
+  /* min-width: 800px; */
+  /* 부모 요소 크기 무시하고 크기를 줄 수 있음 */
+  /* max-width: ; */
+  /* 크기가 동적(다이나믹)일때 => 더이상 늘어나지 않게하기 위한 속성 */
+  justify-content: center;
+}
+
+ul.flex{
+  /* display: flex; 상단에서 선언하여 생략 */
+  /* 지금부터 사용하는 속성은 display: flex: ; */
+  justify-content: center;
+  justify-content: flex-start;
+  justify-content: flex-end;
+  align-items: center;
+  align-items: flex-start;
+  align-items: flex-end;
+
+  
+}
+
+div.flex{
+
+  flex-direction: column;
+  justify-content: center; /*=> align-items(수직)*/
+  align-items: center; /*=> justify-content(수평)*/
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* 부모 요소 크기만큼 크기를 늘리려는 stretch 때문에 
+  여백이 생김, 여백이 싫다면 => 부모요소 크기를 없애고 
+  패딩, 마진, gap등을 활용하여 부모 요소의 크기를 동적으로 */
+}
+
+div.flex > div{
+  width: 300px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+/*
+ display:flex => 
+1. 블록태그를 인라인-블록 태그처럼 수평정렬
+2.가로 세러 가운데 정렬 
+3. 4단배열, 3단배열과 같은 특정 요소의 줄바꿈
+*/
+
+/* 
+부모 요소크기를 자식요소 크기가 벗어났을 때
+부모 요소 크기만큼 크기가 줄어드는데 그 줄어드는 비율을 
+
+다른 요소의 shrink가 모두 2라면
+1은 2배
+
+부모 요소 밑의 자식요소의 shrink의 값을 합산하여 비율로 연산 
+=> 부모 크기 넘었을 때 줄어드는 비율
+
+flex-grow
+  자식 요소 크기의 합을 부모 요소 크기만큼 길이를 늘린다.
+  늘릴때 자식 요소들의 모든 flex-grow의 값을 더하고 
+  이에따라 비율을 분배 
+
+  => 부모의 크기에 맞춰 비율대로 크기를 늘릴 떄 
+
+*/

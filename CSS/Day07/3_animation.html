@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .arrow {
+        color: blue;
+        background-color: aquamarine;
+        position: absolute;
+        top: 50%;
+        right: 32px;
+        transform: translateY(-50%);
+        animation: modifyArrows 0.5s linear infinite;
+      }
+
+      @keyframes modifyArrows {
+        50% {
+          transform: translate(
+            16px,
+            -50%
+          ); /*중복으로 인해 덮어씌워짐 13 번째줄의 tranaslate(-50) 그래서 -50을 유지하면서 16px 이동을 반복*/
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="arrow">&gt;</div>
+  </body>
+</html>

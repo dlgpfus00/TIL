@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- container -->
+  <div>
+
+    <!-- info -->
+    <input type="text" placeholder="이름을 입력해주세요" value="이혜련">
+    <button> 중복 검사 </button>
+    <!-- button의 default type은 submit
+    button === input type submit 
+    button type button === input type button 
+
+    차이는 form 태그 안에서 제출 역할을 하냐 안하냐의 차이 -->
+      <input type="email"> 
+        <!-- form요소 내의 submit 이벤트 발생 시의 유효성 검사 -->
+         
+    <!-- hobby -->
+    <div>
+      취미:
+      <select>
+        <option value="">코딩</option>
+        <option value="">운동</option>
+        <option value="">음악</option>
+      </select>
+    </div>
+
+    <!-- gender -->
+    <div>
+      성별:
+      <label> <input type="radio" name="gender" value="0"> 여성 </label>
+      <!-- 라벨이 겉에 있을 땐 아무 곳을 클릭해도 버튼 클릭됨 -->
+      <input type="radio" name="gender" id="female" value="1"> <label for="female">남성</label>
+      <!-- 나눠놓으면 좋은 점은 남성이 아예 밖에 있어도 클릭 가능 이방법이 제일 베스트 -->
+
+<!-- 위의 방법은 그 라벨 안에서 아무곳이나 선택해도 가능
+아래 방법은 글자가 어디에 위치하던 라디오가 체크됨 -->
+
+      <input type="radio" name="gender"> 비공개
+      <!-- 같은 name을 가진 것 중 하나만 선택 가능 -->
+
+    </div>
+
+    <!-- family -->
+    <div>
+      가족관계
+      <input type="checkbox" value="0" > 본인
+      <input type="checkbox" value="1"> 부모
+      <input type="checkbox" value="2"> 형제
+      <input type="checkbox" value="3"> 지인
+    </div>
+
+  </div>
+
+</body>
+</html>

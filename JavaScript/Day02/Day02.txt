@@ -1,0 +1,137 @@
+논리연산자 
+  논리합(or) -> 둘중에 하나가 true야?
+  논리곱 and -> 둘다 true
+  부정 not
+
+  true || true //tree
+  true || false //true
+  false ||true //true
+  false||false  //false 
+  ex) 
+    5>3 || 2>5 //true 
+    true || false 
+
+
+  true && true //true 
+  true && false // false 
+  false && true //false 
+  false && false // false 
+  ex) 
+    5>3 && 2>5 //false 
+    true && false 
+
+삼항연산자 ,&&연산자
+  (1) 삼항 연산자
+    조건식(t/f) ? true일때 실행: false일때 실행 
+    const a=5; 
+    const b = a> 5 ? "참" ? "거짓"
+    console.log(b) //거짓
+
+  (2) && 연산자
+    조건식 && true일때만 실행
+    const c= a>5 && "참" 
+    --------------- 여기까지만 실행 후 끝임 "참"까지 가지않음
+    console.log(c) -> false 
+
+    const d= a<6 && "참"
+    console.log(d) //참 
+
+  (3) ?? 연산자 
+    특정한 값 ?? 다른 값 
+    => 특정한 값이 있을 때는 특정한 값 없을 때는 다른 값을 
+
+    const e=undefined 
+    const f =e ?? "안녕하세요:"   //e의 값이 있으면 e의 값을, 없으면 f의 값을
+    console.lof(f) //안녕하세요 
+
+    const g= 여러분
+    const h = g ?? "안녕하세요" //g가 있기때문에 여러분을 출력 
+    console.log(h) //여로분
+
+
+제어문
+  조건문, 반복문
+
+  1.조건문
+    (1) if ... else 문
+       const =5;
+       //true, 값이 할당되어있는 변수가 조건식에 들어가면
+       //true를 반환 
+
+       if(a){
+
+       } 
+
+      ex)
+       if(조건식){
+        //조건식이 true면 실행
+
+      }else{
+        //조건식이 false이거나 다른경우
+      }
+      ----------------------------------------------
+
+      if(조건식1){
+        //조건식1이 true가 되어 해당 실행문이 실행되었다면 elseif는 실행되지 않음
+      }
+
+      elseif(조건식2){
+
+      }
+      else {
+
+      }
+
+    (2) switch문
+      if문은 조건식을 활용하여 분기를 나눴다면, switch는 변수의 값에 따라 분기를 생성 
+        let a=5;
+        switch(a){
+          case 1:
+            ...
+          case 2:
+            ..
+
+          default:
+            //모두에 해당되지 않았을 때 기본값
+        }
+  
+  
+  2. 반복문
+    (1) for
+      
+      for(초기화식; 조건식; 증감식){
+          조건식이 참인 경우 실행
+      }
+
+    ex) 
+      for(let i=0; i<3 ; i++){
+        console.log(`${i+1}번째 반복중)
+      }
+
+      //i=0 i <3 true {} 안에 있는 문장 실행 -> i++
+      //i=1 i<3 true ...
+      //i=3 i < 3 false --> 반복 멈춤 
+
+  
+    (2) while
+
+      while(조건식){
+        조건식이 true일 동안 반복할 문장
+      }
+
+      ex) 
+        let count = 0
+        while(count <3){
+          console.log(count++)
+        }
+
+    무한 루프 
+      while(true){
+        ... 특정한 값이 오기까지 기다림 
+        특정 값이 온다면 탈출 
+        break;
+        return;
+      }
+*함수
+
+

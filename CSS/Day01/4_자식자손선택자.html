@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul a{
+      text-decoration: none;
+    }
+
+    ul > a{
+      color:deeppink
+    }
+    /* 네이버*/
+
+    ul> li> a{
+      color: aqua;
+    }
+    /*다음*/
+
+    ul> li> p> a{
+      color: blue;
+    }
+
+    /*구글*/
+
+    ul li a{
+      color: red;
+    }
+    /*다음 구글*/
+    /*자식 자손의 우선순위는 깊이가 제일 중요(뎁스)(몇번을 타고갔냐)*/
+
+    ul li > p> a{
+      color: blueviolet;
+    }
+    /*구글*/
+  </style>
+</head>
+<body>
+  <h2>자식 자손 선택자 </h2>
+  <ul>
+    <a href="#">네이버</a>
+    <li>
+      <a href="#">다음</a> 
+      <!-- red -->
+    </li>
+    <li>
+      <p>
+        <a href="#">구글</a>
+        <!-- blueviolet -->
+      </p>
+    </li>
+  </ul>
+</body>
+</html>

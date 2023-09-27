@@ -1,0 +1,65 @@
+main{
+  height: calc(100vh - 60px - 300px);
+}
+
+.container{
+  display:flex ;
+  border: 3px solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+.container > form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main> form{
+
+  width:300px;
+  height: 240px;
+  padding: 16px;
+  flex-direction: column;
+  
+  /* colum을 왜하지?!? 
+  세로인 상태를 유지하기 위해서 */
+  border: 3px solid black;
+}
+
+main > form > p{
+  display: flex;
+   /* 부모가 부여한 center 옵션을 무시하고 스스로 부모ㄴ만큼 크기가 커짐 
+      form태그에 align-items:center 부여 안해주면 스트레치 안해도 댐
+   */
+   align-self: stretch;
+  justify-content: space-between;
+ 
+}
+
+main > form > .button-wrapper{
+  /* align-items: stretch; */
+  width: 100%;
+  padding: 0 16px;
+  
+}
+
+main > form > .button-wrapper > button{
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+
+  border-radius: 8px;
+}
+
+main > form > .button-wrapper > p{
+  text-align: center;
+  margin-top: 8px;
+}
+
+main > form > .button-wrapper > p > span{
+  font-weight: bold;
+  font-size: 20px;
+}

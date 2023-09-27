@@ -1,0 +1,16 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+*{
+  font-family: 'Noto Sans KR', sans-serif;
+} */
+
+@font-face {
+  font-family: Noto;
+  src: url("../assets/font/NotoSansKR-Regular.otf");
+}
+
+*{
+  font-family: "Noto ";
+  font-weight: 100;
+  /* 폰트 굵기 100~900
+  기본값 400, thin 100, bold 700, extra bold 900 */
+}

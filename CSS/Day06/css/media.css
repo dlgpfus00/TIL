@@ -1,0 +1,83 @@
+header{
+  height: 60px;
+  background-color: red;
+
+}
+
+main{
+  display: flex;
+  height: 100vh;
+
+}
+
+main > aside{
+  height: 100%;
+  width: 480px;
+  background-color: yellow ;
+}
+
+footer{
+  height: 160px;
+  padding: 32px;
+  color: white;
+  background-color: black;
+}
+
+nav{
+  display: none;
+  height: 40px;
+  background-color: green;
+}
+
+section{
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap; /*줄바꿈*/
+  gap: 16px;
+
+}
+
+section > div{
+  flex-basis: 280px;
+  border: 1px solid black;
+}
+/* 
+max만 사용했을 때는 
+순서는 크기가 큰 순서대로 배치해야함
+
+*/
+/*
+size
+mobile 345~ 767
+tablet 768~1279
+
+ */
+@media screen and (max-width: 1280px) {
+  main > aside{
+    width: 270px;
+  }
+  
+  footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px){
+  section{
+    display: flex;
+    justify-content: center;
+  }
+  section > div{
+    flex-basis: 380px;
+  }
+  aside{
+    display: none;
+  }
+
+  nav{
+    display: block;
+  }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/Day06/css/reset.css" />
+    <style>
+      body {
+        height: 100vh;
+        flex-direction: column;
+        display: flex;
+        place-content: center center; /*align-content, justyfi-content를 한번에 다룰 수 있는 속성*/
+        align-items: center;
+        gap: 16px;
+      }
+
+      div {
+        width: 300px;
+        height: 200px;
+        border: 1px solid #000;
+        transition: all 2s ease;
+      }
+
+      #scale:hover {
+        border: 1px dashed red;
+        transform: scale(1.5); /*1.5배*/
+        transform: scale(0.5); /*0.5배 (축소)*/
+        transform: scaleX(-1);
+        transform: scaleY(
+          -1
+        ); /*상하 반전 -> height이 커지면 위에서 아래로 커지지만, 반전 시키면 아래에서 위에서 커지는 것도 중요*/
+      }
+      #translate:hover {
+        transform: translate(50px);
+        /*베너 캐러셀에 많이 쓰임*/
+      }
+
+      /*body{
+      height: 200vh;
+    }*/
+
+      .modal-wrapper {
+        border: none;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        /*absolute를 주면 스크롤시 모달 배경이 따라오지 않음*/
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      .modal-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /*해당 요소의 가로 세로 길이의 50%만큼 (-) 위로  ,왼쪽으로 이동
+      translate에 %가 들어가면 해당 요소 크기 기준*/
+        /*해당 요소만큼 옮기지 않으면 사각형 기준 가운데가 아닌, 왼쪽 꼭짓점 기준 중앙으로 위치*/
+      }
+
+      #rotate:hover {
+        transform: rotate(90deg);
+        transform: rotate(180deg);
+        transform: rotateY(180deg);
+        /* 좌유ㅜ반전trasition과 함께 사용하면 flip(카드를 뒤집는거 같은 효과) 효과로 사용 가능*/
+        transform: perspective(150px) rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scale">scale</div>
+    <div id="translate"></div>
+    <div id="rotate">rotate</div>
+    <!-- <div class="modal-wrapper">
+    <div class="modal-container"></div>
+  </div> -->
+  </body>
+  <div></div>
+</html>

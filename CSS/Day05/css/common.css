@@ -1,0 +1,68 @@
+/*root*/
+:root{
+  --primary-color: cadetblue;
+  --ddd:black;
+}
+
+/*header*/
+header{
+  height: 60px;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* justify-content: space-evenly; */
+  /* 요소 주변 일정 여백을 줌 */
+  padding: 0px 15px;
+}
+
+header > ul{
+  display: flex;
+}
+
+header > ul > li:first-of-type::after{
+  content: "|";
+  margin: 0 4px;
+}
+
+header > ul > li:hover{
+  color:red
+}
+/* 
+space-between 
+첫 시작요소와 끝 요소를 각 * 양끝에 붙이고 *
+부모 요소 기준 동일한 여백으로 나눈 것
+
+space-evenly
+각 요소를 부모 요소 기준 * 동일한 여백 * 으로 나눈 것
+
+space-around
+각 요소 * 주변에(왼쪽,오른쪽) * 동일한 여백으로 나눈 것
+
+=> flex 요소의 각 요소를 일정 크기만큼 떨어뜨려 놓을 떄
+
+위아래를 조절하고싶으면 flex-direction 이용
+*/
+
+/*footer*/
+footer{
+  height: 300px;
+  display: flex;
+  background-color: cadetblue;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  
+}
+/*aligin*/
+/* css의 재사용을 위해 공통되는 css를 분리 */
+.flexcenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+  height: calc(100vh - 60px - 300px);
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 근래에는 상단에 defer나 async 속성을 통해 호출  -->
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div clalss="class"></div>
+    <div id="id"></div>
+    <!-- 이전에는 최하단에 dom-api 호출했다면 -->
+    <script>
+      const div2 = document.getElementById("id");
+      console.log(div2);
+    </script>
+    <!-- 12시5분 -->
+  </body>
+</html>

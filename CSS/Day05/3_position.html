@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      margin: 15px;
+      border: 1px solid deeppink;
+    }
+    .static{
+      position: static;
+      top: 160px;
+      /*top left 사용 불가*/
+    }
+    .relative{
+      position: relative;
+      left: 160px;
+      /*자기 자신이 기준이 되어 자신의 현재 위치에서부터 이동*/
+      /*absolute 기준 (거의 이 용도로 많이 씀)*/
+      /*마진으로 대체 가능*/
+    }
+  </style>
+</head>
+<body>
+  <div class="static">
+    static
+  </div>
+  <div class="relative">
+    relative
+  </div>
+</body>
+</html>

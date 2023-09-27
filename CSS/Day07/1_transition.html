@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    header > nav{
+      height: 60px;
+      background-color: yellow;
+    }
+
+    /*자식 선택자로서 tag 선택자를 남용해서는 안됨 why=> css 화면에 나타낼 때 원래 -> 오른쪽에서 왼쪽으로읽음(nav를 찾고 header를 찾음)
+    => 불필요한 일처리 => 따라서 자식인 nav에 클래스를 부여하여 사용하는게 좋음 */
+    /*모든 태그를 자식으로 선택하는 것이 아닌, 범위를 좁혀 선택하는 것이 브라우저가 더 빠르게 화면을 그려줄 수 있다*/
+
+    header >.hide_menu{
+      
+      height: 0px;
+      background-color: orange;
+      transition: height 1s linear;
+      /*높이 속성이 바뀔 떄, 1초동안 전환하고, 균등한 속도로 변경하라*/
+    }
+
+    header:hover > .hide_menu{
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h2>트랜지션</h2>
+  <header>
+    <nav></nav>
+    <div class="hide_menu"></div>
+  </header>
+</body>
+</html>

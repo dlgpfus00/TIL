@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .grid-wrapper{
+      display: grid;
+      grid-template-columns: 500px 300px 1fr;
+      grid-template-rows: 500px 1fr 1fr;
+      grid-template-areas: 
+          "header header header"
+          "aside main main"
+          "footer footer footer"
+          ;
+    }
+    header{
+      grid-area: header;
+    }
+    aside{
+      grid-area: aside;
+    }
+    main{
+      grid-area: main;
+    }
+    footer{
+      grid-area: footer;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="grid-wrapper">
+    <header>header</header>
+    <aside>aside</aside>
+    <main>main</main>
+    <footer>footer</footer>
+  </div>
+</body>
+</html>

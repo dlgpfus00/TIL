@@ -1,0 +1,28 @@
+.mainbox{
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  
+}
+
+h2{
+  margin-bottom: 30px;
+  border-bottom: 1px solid black;
+}
+
+.stack{
+  margin-bottom: 10px;
+}
+
+section{
+  margin-bottom: 50px;
+}
+
+

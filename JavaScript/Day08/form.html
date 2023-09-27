@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h2>로그인</h2>
+      <p>
+        <input type="text" name="user-email" />
+      </p>
+      <p><input type="text" name="user-pw" /></p>
+      <button class="login-btn" onclick="onClickLogin()">로그인</button>
+    </div>
+    <script>
+      const $userEmail = document.getElementsByName("user-email");
+      const $userpw = document.querySelector("[name=user-pw]");
+      // 1시6분
+      const $loginBtn = document.querySelector();
+      console.log($userEmail[0], $userpw); //유사배열객체 , array from을 통해 유사배열객체를 배열로 바꿀 수 있음
+
+      //event
+      /*
+      1. html 요소의 onClick 속성
+      2. dom select의 properties onClick 속성
+      //이벤트 타겟을 찾기가 힘들어서 1,2, 잘 안씀 
+      //this 를 활용할 수는 있지만, 같은 html 파일 안에 이어ㅑ함 
+      3. addEcentListner  ********가장 많이 사용 
+      */
+
+      function onClickLogin() {
+        console.log($userEmail[0].value, $userpw.value);
+        //backend api data fetching
+      }
+    </script>
+  </body>
+</html>
