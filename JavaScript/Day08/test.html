@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .on {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu-item">menu-1</div>
+    <div class="menu-item">menu-2</div>
+    <div class="menu-item">menu-3</div>
+    <div class="menu-item">menu-4</div>
+    <div class="menu-item">menu-5</div>
+  </body>
+  <script>
+    //querySelectorAll로 불러온 것들은 node-items로 오기 때문에 foreach 사용 가능
+    //5개의 메뉴 아이템에 모두 클릭이벤트를 주기위해서 순회 ==> foreach
+    const $menuItems = document.querySelectorAll(".menu-item");
+    $menuItems.forEach((el) => {
+      el.addEventListener("click", (event) => {
+        //내가 클릭 한 요소만 백그라운드를 바꾸고 싶음
+        const target = event.target; //클릭한 요소만 가져옴
+
+        //내가 클릭한 나머지 요소에 on class가 있다면 삭제
+        //on을 추가하기 전에 menuitems들이 리스너를 가지고있으면 삭제해야함
+        $menuItems.forEach((el) => {
+          if (el.classList.contains("on")) {
+            el.classList.remove("on");
+          }
+        });
+        target.classList.add("on");
+      }); //5가지 이벤트에 이벤트 리스너 추가
+    });
+  </script>
+</html>

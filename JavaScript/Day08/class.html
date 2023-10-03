@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      /*class 명을 추가하여 css속성 부여 가능 */
+      .on {
+        background-color: blue;
+      }
+    </style>
   </head>
   <body>
     <!-- [0]번째 확인하기 위해서 div 추가해서 연습해ㅂ기 -->
@@ -12,9 +18,25 @@
     <button class="change-color-btn">글자색상 변경</button>
     <button class="add-class-btn">클래스 추가</button>
     <script>
+      const div = document.getElementsByTagName("div"); //div는 여러개고, s가 붙었기 때문에 지정해야함
       const $changeTextBtn = document.querySelector(".change-text-btn");
       const $changecolorbtn = document.querySelector(".change-color-btn");
       const $addClassBtn = document.querySelector(".add-class-btn");
+
+      $changeTextBtn.addEventListener("click", () => {
+        div[0].innerText = "텍스트가 변경되었습니다.";
+      });
+
+      $changecolorbtn.addEventListener("click", () => {
+        div[0].style.color = "#f00";
+      });
+
+      $addClassBtn.addEventListener("click", () => {
+        if (div[0].classList.contains("on")) {
+          return div[0].classList.remove("on");
+        } //있으면 삭제하고, 없으면 on 추가
+        div[0].classList.add("on");
+      });
     </script>
   </body>
 </html>

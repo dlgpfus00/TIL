@@ -8,17 +8,15 @@
   <body>
     <div>
       <h2>로그인</h2>
-      <p>
-        <input type="text" name="user-email" />
-      </p>
+      <p><input type="text" name="user-email" /></p>
       <p><input type="text" name="user-pw" /></p>
-      <button class="login-btn" onclick="onClickLogin()">로그인</button>
+      <button class="login-btn">로그인</button>
     </div>
     <script>
+      //$는 dom api라는 것을 알려주는 변수기호임
       const $userEmail = document.getElementsByName("user-email");
       const $userpw = document.querySelector("[name=user-pw]");
-      // 1시6분
-      const $loginBtn = document.querySelector();
+      const $loginBtn = document.querySelectorAll("login-btn"); //복수객체 - 배열형태로 올거임
       console.log($userEmail[0], $userpw); //유사배열객체 , array from을 통해 유사배열객체를 배열로 바꿀 수 있음
 
       //event
@@ -30,10 +28,19 @@
       3. addEcentListner  ********가장 많이 사용 
       */
 
+      /*권장되지 않음
       function onClickLogin() {
         console.log($userEmail[0].value, $userpw.value);
         //backend api data fetching
       }
+
+      $loginBtn[0].onClick = onClickLogin;*/
+
+      $loginBtn[0].addEventListener("click", (e) => {
+        console.log(e.target); //사용자가 누른 버튼
+        e.target.innerText = "로그인 완료";
+        console.log($userEmail[0].value, $userpw.value);
+      });
     </script>
   </body>
 </html>
