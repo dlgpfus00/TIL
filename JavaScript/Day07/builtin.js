@@ -1,4 +1,4 @@
-const str = "hello";
+const str = " ";
 
 str.charAt(4); //5
 str.concat("마이멜로디"); //hello 마이멜로디

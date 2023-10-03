@@ -22,6 +22,9 @@ console.log(arr); //[a,b]
 
 const arr2 = Array.from({ length: 5 }); //길이가 5인 비어있는 배열 생성
 console.log(arr2);
+console.log(
+  "================================================================="
+);
 
 const arr3 = Array.from({ length: 5 }, (el, index) => {
   return 0;
@@ -31,7 +34,9 @@ const arr3 = Array.from({ length: 5 }, (el, index) => {
 console.log(arr3);
 //여러분이 설ㄱ계한 구조에서 필요한 길이만큼 생성해야하는 배열이 있을 때 사용
 
-console.log("==========================");
+console.log(
+  "================================================================="
+);
 
 //Array().fill().map()
 
