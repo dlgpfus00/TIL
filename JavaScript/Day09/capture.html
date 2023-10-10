@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body * {
+        margin: 10px;
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      Form
+      <div>
+        div
+        <p>p</p>
+      </div>
+    </form>
+    <script>
+      const els = document.querySelectorAll("*"); //전체 가져옴 (css 전체선택자)
+      //버블링이란 자식을 클릭했을 때 부모로 이벤트가 전파
+
+      for (let el of els) {
+        //for ~ of => els가 배열형태로 옴 그 요소 하나하나를 el에 담음
+
+        el.addEventListener(
+          "click",
+          (e) => {
+            e.stopPropagation(); //버블링 제어
+            alert(el.tagName);
+          },
+          true //캡쳐링 제어
+        );
+      }
+    </script>
+  </body>
+</html>
