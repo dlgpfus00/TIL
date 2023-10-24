@@ -123,7 +123,7 @@ $writeBtn.addEventListener("click", () => {
 
   const article = document.createElement("article");
   article.className = "board-card";
-  article.innerText = `
+  article.innerHTML = `
     <h3 class="flex-center">
     ${$title.value}
     <button>삭제</button>

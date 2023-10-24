@@ -20,6 +20,8 @@ React의 구동원리, 핵심 컨셉
      특히 사용되지 않는 라이브러리의 코드를 사용자가 다운로드
      받지 않게하여 랜더링 비용을 감소
 
+     ==> 용량이 큰 우리 프로제트를 사용자을이 빠르게 다운로드 받기 위해서 정리해주는 파일 
+
  webpack  (번들러 중 하나)
   -> cra에서 사용하고 있는 bundler, 모듈 단위의 개발이 가능
      loader를 통해 js안에서도 html과 같은 문법을 사용할 수 있게 해줌
@@ -71,7 +73,7 @@ React의 구동원리, 핵심 컨셉
         ...
       main(home)
       sing-in
-      sign-up (www.seongyong.com/sign-up)
+      sign-up (www.hyelyeon.com/sign-up)
       ...
     uils
     libs
@@ -130,7 +132,7 @@ React의 구동원리, 핵심 컨셉
             AddTodoModal.js
             TodoList.js (수업에 필요한 컴포넌트)
             OneTodo.js
-      routes
+      routes (주소랑 페이지를 연결해주는 )
         routing.js
       styles
         common.js - 공용 css
